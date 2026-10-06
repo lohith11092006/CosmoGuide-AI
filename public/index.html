@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CosmoGuide AI — Space & Astronomy Assistant</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🚀</div>
+        <div>
+          <h1>CosmoGuide AI</h1>
+          <span>Space & Astronomy Assistant</span>
+        </div>
+      </div>
+
+      <button class="new-chat" id="newChat">＋ New Chat</button>
+
+      <div class="side-section">
+        <p class="side-label">Explore</p>
+        <button class="side-action" data-message="Tell me about Mars">🔴 Mars</button>
+        <button class="side-action" data-message="Tell me about Jupiter">🟠 Jupiter</button>
+        <button class="side-action" data-message="Tell me about Saturn">🪐 Saturn</button>
+        <button class="side-action" data-message="Tell me about the Moon">🌕 Moon</button>
+      </div>
+
+      <div class="side-section">
+        <p class="side-label">Live Space Data</p>
+        <button class="side-action" data-message="Where is the ISS right now?">🛰️ ISS Position</button>
+        <button class="side-action" data-message="How many people are in space right now?">👨‍🚀 People in Space</button>
+        <button class="side-action" data-message="Show me NASA's Astronomy Picture of the Day">🌌 NASA APOD</button>
+      </div>
+
+      <div class="status-card">
+        <span class="status-dot" id="statusDot"></span>
+        <div>
+          <strong id="statusText">Checking APIs…</strong>
+          <small>Backend connection</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="chat-area">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">PROBLEM STATEMENT 14</span>
+          <h2>Space & Astronomy Information Assistant</h2>
+        </div>
+        <button class="help-button" id="helpButton">?</button>
+      </header>
+
+      <section class="messages" id="messages" aria-live="polite"></section>
+
+      <section class="suggestions" id="suggestions">
+        <button data-message="What is NASA's Astronomy Picture of the Day?">🌌 Astronomy Picture</button>
+        <button data-message="Tell me about Mars gravity">🔴 Mars gravity</button>
+        <button data-message="Where is the ISS right now?">🛰️ ISS location</button>
+        <button data-message="How many people are in space?">👨‍🚀 People in space</button>
+      </section>
+
+      <form class="composer" id="chatForm">
+        <textarea id="messageInput" rows="1" placeholder="Ask anything about space and astronomy…" autocomplete="off"></textarea>
+        <button type="submit" id="sendButton" aria-label="Send message">➤</button>
+      </form>
+      <p class="disclaimer">CosmoGuide AI uses public space-data APIs. API availability and data may change.</p>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
